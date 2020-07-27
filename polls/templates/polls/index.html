@@ -1,0 +1,5 @@
+<ul>
+    {% for job in job_display %}
+    <li><a href={{ job.link }}>{{ job.github_job}}</a></li>
+    {% endfor %}
+</ul>
