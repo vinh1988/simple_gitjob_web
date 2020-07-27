@@ -126,8 +126,7 @@ USE_TZ = True
 
 
 
-# Activate Django-Heroku.
-django_heroku.settings(locals())
+
 
 # Simplified static file serving.
 
@@ -138,10 +137,6 @@ django_heroku.settings(locals())
 # STATICFILES_DIRS = (
 #     os.path.join(BASE_DIR, 'static'),
 # )
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (
-   os.path.join(BASE_DIR, '../app/static'),
-)
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
