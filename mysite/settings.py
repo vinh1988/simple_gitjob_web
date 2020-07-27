@@ -11,17 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-import psycopg2
-import dj_database_url
 
-django-heroku.settings(locals())
-
-
-DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
-
-DATABASE_URL = os.environ['DATABASE_URL']
-
-conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -89,12 +79,8 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd2mu3e7fnilfth',
-        'HOST': 'ec2-54-159-138-67.compute-1.amazonaws.com',
-        'PORT': 5432,
-        'USER': 'jxnmgpcqxyyezw',
-        'PASSWORD': 'd034cc62abc32f0e5dc33a52f48a74275c1f17cc577773af71a86c2e7c721ac8',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
