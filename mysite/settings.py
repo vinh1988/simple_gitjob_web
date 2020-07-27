@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '93ee9dynl6#ej1ezt5ksbi79&8c2x0j7y2_fpwt*xb9om3j#-6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['fierce-earth-98532.herokuapp.com', '127.0.0.1']
 
