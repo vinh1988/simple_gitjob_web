@@ -138,4 +138,3 @@ django_heroku.settings(locals())
 # Simplified static file serving.
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-STATIC_ROOT = 'staticfiles'
